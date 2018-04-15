@@ -1,0 +1,10 @@
+{% macro displayImages(hits_list) %}
+  {%for image in hits_list %}
+  <div  class ="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <a>
+        <img src ="{{image.webformatURL}}">
+      </a>
+
+    </div>
+  </div>
