@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% import 'macros.html' as macro %}
-{% block content %}
-<div class="container">
+
   <br>
   {% block styles%}
   {{ super() }}
@@ -9,17 +8,50 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
   {% endblock %}
+
   {% block content%}
+<div class="container">
 <div class ="jumbotron">
+  <div class="row">
   <h2>Welcome to the one minute pitch app</h2>
   <p> choose from any of the categories provided below</p>
+</div>
 </div>
 </div>
 <div class="container">
 <div class="jumbotron">
   <div class="row">
-    {{macro.displayImages(animals)}}
+    <h1>Business category</h1>
+    {{macro.displayImages(business)}}
+  <button type ="button" class="btn btn-info">Click Here to Pitch</button>
+  </div>
+</div>
+</div>
+<div class="container">
+<div class="jumbotron">
+  <div class="row">
+    <h1>Health Category</h1>
+    {{macro.displayImages(health)}}
+    <button type ="button" class="btn btn-info">Click Here to Pitch</button>
 
+  </div>
+</div>
+</div>
+<div class="container">
+<div class="jumbotron">
+  <div class="row">
+    <h1>Religion Category</h1>
+    {{macro.displayImages(religion)}}
+    <button type ="button" class="btn btn-info">Click Here to Pitch</button>
+  </div>
+</div>
+</div>
+<div class="container">
+<div class="jumbotron">
+  <div class="row">
+    <h1> Fashion Category</h1>
+    {{macro.displayImages(fashion)}}
+  <button type ="button" class="btn btn-info">Click Here to Pitch</button>
   </div>
 </div>
 </div>
