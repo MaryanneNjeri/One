@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    PIX_BASE_URL = 'https://pixabay.com/api/?key={}&category={}'
+    PIX_BASE_URL = 'https://pixabay.com/api/?key={}&category={}&image_type=photo'
     PIX_API_KEY=os.environ.get('PIX_API_KEY')
 
 

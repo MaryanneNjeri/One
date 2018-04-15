@@ -23,4 +23,14 @@ def get_images(category):
         if get_images_response['hits']:
             images_results_list=get_images_response['hits']
             images_results= process_results(images_results)
-        return images_results    
+        return images_results
+def process_results(hits_list):
+    images_results=[]
+    for result in hits_list:
+        id= result.get('id')
+        userImageURL=result.get('userImageURL')
+        webformatURL=result.get('webformatURL')
+    if id:
+        image_object =Images(id,userImageURL,webformatURL)
+        images_results.append(image_object)
+    return images_results
