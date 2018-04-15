@@ -2,10 +2,26 @@
 {% import 'macros.html' as macro %}
 {% block content %}
 <div class="container">
+  <br>
+  {% block styles%}
+  {{ super() }}
+  <link rel ="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  {% endblock %}
+  {% block content%}
+<div class ="jumbotron">
+  <h2>Welcome to the one minute pitch app</h2>
+  <p> choose from any of the categories provided below</p>
+</div>
+</div>
+<div class="container">
+<div class="jumbotron">
   <div class="row">
     {{macro.displayImages(animals)}}
 
   </div>
+</div>
 </div>
 
 {% endblock %}

@@ -4,6 +4,9 @@ from ..request import get_images
 
 @main.route('/')
 def index():
-    animals =get_images('animals')
+    fashion =get_images('fashion')
+    business=get_images('business')
+    health=get_images('health')
+    religion=get_images('religion')
     title = 'Home Welcome to the one minute pitch app'
-    return render_template('index.html',title =title,animals=animals)
+    return render_template('index.html',title =title,fashion=fashion,business=business,religion=religion,health=health)
